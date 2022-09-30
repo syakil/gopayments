@@ -18,8 +18,8 @@ db:
   dbname: "dbName"
 payment:
   midtrans:
-    secretKey: "midtranssecretkey"
-    clientId: "midtransclientid"
+    secretKey: "SB-Mid-server-QK7Nsoy1j1LgvVowpelu7YPF"
+    clientId: "G727631850"
 `)
 
 func TestLoadSecret(t *testing.T) {
@@ -36,8 +36,8 @@ func TestLoadSecret(t *testing.T) {
 		assert.Equal(t, "john", secret.DB.UserName)
 		assert.Equal(t, "passwd", secret.DB.Password)
 		assert.Equal(t, "dbName", secret.DB.DBName)
-		assert.Equal(t, "midtransclientid", secret.Payment.Midtrans.ClientID)
-		assert.Equal(t, "midtranssecretkey", secret.Payment.Midtrans.SecretKey)
+		assert.Equal(t, "G727631850", secret.Payment.Midtrans.ClientID)
+		assert.Equal(t, "SB-Mid-server-QK7Nsoy1j1LgvVowpelu7YPF", secret.Payment.Midtrans.SecretKey)
 	})
 
 	t.Run("Test env var overriding", func(t *testing.T) {
